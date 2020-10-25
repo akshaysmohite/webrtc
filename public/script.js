@@ -22,6 +22,7 @@ navigator.mediaDevices.getUserMedia({
   })
 
   socket.on('user-connected', userId => {
+    console.log(1231);
     connectToNewUser(userId, stream)
   })
 })
@@ -43,7 +44,7 @@ function connectToNewUser(userId, stream) {
   call.on('close', () => {
     video.remove()
   })
-
+console.log(23123);
   peers[userId] = call
 }
 
